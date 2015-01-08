@@ -1,5 +1,5 @@
 #==============================================================================
-# MBS - Can't Run
+# MBS - Lock Run
 #
 # por Masked
 #
@@ -9,7 +9,7 @@
 #==============================================================================
 # Configurações
 #==============================================================================
-module MS_CantRun_Config
+module MS_LockRun_Config
    
   # ID da switch que desativa a corrida
   
@@ -22,7 +22,7 @@ end
 class Game_Player < Game_Character
   
     def dash?
-    return false if $game_switches[MS_CantRun_Config::ID]
+    return false if $game_switches[MS_LockRun_Config::ID]
     return false if @move_route_forcing
     return false if $game_map.disable_dash?
     return false if vehicle
